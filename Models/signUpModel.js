@@ -1,7 +1,7 @@
 const mariadb = require("mariadb");
 const bcrypt = require("bcrypt");
-require("dotenv").config();
 const { BCRYPT_KEY } = process.env;
+require("dotenv").config();
 
 const { DBconnection } = require("../Config/config");
 
