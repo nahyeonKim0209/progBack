@@ -1,9 +1,11 @@
 const express = require("express");
 
+require("dotenv").config();
+const { PORT } = process.env;
+
 const signAPI = require("./API/signAPI");
 
 const app = express();
-const port = 4000;
 
 //POST request로부터 파라미터 데이터 추출.
 app.use(express.json());
