@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { signUp } = require("../Models/signUpModel");
-const { signIn } = require("../Models/signInModel");
+const { signIn } = require("../Models/SignInModel");
 
 router.post("/signUp", async (req, res) => {
   try {
