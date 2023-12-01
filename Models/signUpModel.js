@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 const { BCRYPT_KEY } = process.env;
 
-const { DBconnection } = require("../../Config/config");
+const { DBconnection } = require("../Config/config");
 
 const dbConfig = DBconnection();
 const pool = mariadb.createPool(dbConfig);

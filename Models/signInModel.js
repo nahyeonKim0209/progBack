@@ -2,7 +2,7 @@ const mariadb = require("mariadb");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
 
-const { DBconnection } = require("../../Config/config");
+const { DBconnection } = require("../Config/config");
 
 const dbConfig = DBconnection();
 const pool = mariadb.createPool(dbConfig);

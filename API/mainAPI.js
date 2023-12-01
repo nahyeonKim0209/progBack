@@ -3,8 +3,8 @@
 const express = require("express");
 const router = express.Router();
 
-const { getUserCard } = require("../Models/main/getUserCardModel");
-const { getUserIdList } = require("../Models/main/getUserIdList");
+const { getUserCard } = require("../Models/getUserCardModel");
+const { getUserIdList } = require("../Models/getUserIdList");
 
 router.post("/mainPage", async(req,res)=>{
 
