@@ -27,7 +27,11 @@ router.post("/signIn", async (req, res) => {
     const formData = req.body;
     const result = await signIn(formData);
     if (result.success) {
-      res.status(200).json({ success: true, message: result.message });
+      const { token } = result;
+      res
+        .status(200)
+        .cookie("token", token)
+        .json({ success: true, message: result.message });
     } else {
       res.status(401).json({ success: false, message: result.message });
     }
