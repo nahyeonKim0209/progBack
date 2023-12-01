@@ -1,4 +1,0 @@
-/* 
-get mainpage data
-*/
-

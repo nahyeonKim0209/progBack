@@ -1,9 +1,11 @@
 const express = require("express");
 
 require("dotenv").config();
-const { PORT } = process.env;
+//const { PORT } = process.env;
+const port = 4000;
 
 const signAPI = require("./API/signAPI");
+const mainAPI = require("./API/mainAPI");
 
 const app = express();
 
@@ -12,6 +14,7 @@ app.use(express.json());
 
 //API 연결
 app.use("/sign", signAPI);
+app.use("/main", mainAPI);
 
 //서버 실행
 app.listen(port, () => {
